@@ -1,0 +1,15 @@
+[project]
+name = "quicksight-lineage-mcp"
+version = "0.1.0"
+description = "quicksight datasets, analyse and dashboard relationship"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "boto3>=1.38.10",
+    "mcp[cli]>=1.7.1",
+]
+
+[tool.uv.workspace]
+members = [
+    "quicksight-lineage-mcp",
+]
