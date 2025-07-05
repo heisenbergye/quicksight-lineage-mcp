@@ -162,11 +162,13 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 2. create venv and 
 ```
+% git clone https://github.com/heisenbergye/quicksight-lineage-mcp.git
+% cd quicksight-lineage-mcp
 % uv venv .venv
 % source .venv/bin/activate
-% uv add
+% uv add "mcp[cli]" boto3
 ```
-3. Ensure the MCP server is properly configured in your Q CLI environment
+3. [Install Q CLI](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-installing.html) and [Ensure the MCP server is properly configured in your Q CLI environment](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-mcp-understanding-config.html), or you can use CLINE in IDE etc.
 ```
 $ cat ~/.aws/amazonq/mcp.json
 {
@@ -182,7 +184,7 @@ $ cat ~/.aws/amazonq/mcp.json
 }
 }
 ```
-4. Verify AWS credentials have the necessary QuickSight permissions
+4. Configue AWS CLi with AWS credentials have the necessary QuickSight permissions
 5. Test connectivity with a simple resource listing command
 
 ## Common Use Cases
